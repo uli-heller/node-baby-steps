@@ -6,6 +6,21 @@ some basic knowledge about node and javascript.
 At the moment, it may not be beneftial to you
 at all!
 
+Preparations
+------------
+
+Install NODE. Details: TBD.
+
+Verify the installation:
+
+```sh
+$ node --version
+v24.11.1
+
+$ npm --version
+11.6.2
+```
+
 Links And References
 --------------------
 
