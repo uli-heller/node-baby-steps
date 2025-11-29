@@ -86,6 +86,13 @@ Command Line Parameters
   Output: uli.txt
   ```
 
+### Use "util.parseArgs"
+
+There is the method `parseArgs()` from module `node:util` to parse command line arguments. I don't give an example here, since it is way more tedious to
+set up and it provides no command line help for example (option `--help`).
+
+See [Node.js v25.2.1 documentation - util.parseArgs([config])](https://nodejs.org/api/util.html#utilparseargsconfig) for details!
+
 Working With MongoDB
 --------------------
 
