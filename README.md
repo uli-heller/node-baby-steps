@@ -38,8 +38,41 @@ Hello World
 Working With MongoDB
 --------------------
 
-- Folder: [00-hello-world](00-hello-world)
-
+- Create project directory and cd into it: [010-mongodb](010-mongodb)
+- Initialize the node project: `npm init -y` -> creates [package.json](010-mongodb/package.json)
+  ```json
+  {
+    "name": "010-mongodb",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs"
+  }
+  ```
+- Install the mongodb driver: `npm install mongodb@latest` -> 7.0.0
+  ```diff
+  diff --git a/010-mongodb/package.json b/010-mongodb/package.json
+  index de1cc83..af704c5 100644
+  --- a/010-mongodb/package.json
+  +++ b/010-mongodb/package.json
+  @@ -9,5 +9,8 @@
+     "keywords": [],
+     "author": "",
+     "license": "ISC",
+  -  "type": "commonjs"
+  +  "type": "commonjs",
+  +  "dependencies": {
+  +    "mongodb": "^7.0.0"
+  +  }
+   }
+  ```
+  
 Links And References
 --------------------
 
