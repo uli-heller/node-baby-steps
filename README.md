@@ -21,6 +21,20 @@ $ npm --version
 11.6.2
 ```
 
+Hello World
+-----------
+
+- Folder: [00-hello-world](00-hello-world)
+- File: [00-hello-world/hello-world.js](00-hello-world/hello-world.js)
+  ```
+  console.log('Hello world from Node.js');
+  ```
+- Run:
+  ```
+  $ node 00-hello-world/hello-world.js 
+  Hello world from Node.js
+  ```
+
 Links And References
 --------------------
 
