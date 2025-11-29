@@ -35,6 +35,57 @@ Hello World
   Hello world from Node.js
   ```
 
+Command Line Parameters
+-----------------------
+
+### Dump Them All
+
+- Folder: [005-command-line-parameters](005-command-line-parameters)
+- File: [005-command-line-parameters/dump.js)(005-command-line-parameters/dump.js)
+  ```
+  console.log(process.argv);
+  ```
+- Run:
+  ```
+  $ node 005-command-line-parameters/dump.js -o sample.out
+  [
+    '/home/uli/Software/node-v24.11.1-linux-x64/bin/node',
+    '/home/uli/git/github/uli-heller/node-baby-steps/005-command-line-parameters/dump.js',
+    '-o',
+    'sample.out'
+  ]
+  ```
+
+### Use "commander"
+
+- Some preparations:
+  ```
+  cd 005-command-line-parameters
+  npm init -y
+  npm install commander@latest
+  # ... installs version 14.0.2
+  ```
+- File: [parse.js](005-command-line-parameters/parse.js)
+- Run:
+  ```
+  $ node 005-command-line-parameters/parse.js -h
+  Usage: parse [OPTIONS]...
+  
+  Options:
+    -v, --version               output the version number
+    -o, --output <output-file>  Overwrite the output file. (default: "default-poutput-file.txt")
+    -R, --reverse               Flag to reverse the output.
+    -h, --help                  display help for command
+  
+  $ node 005-command-line-parameters/parse.js 
+  Reverse: Reverse flag is not present.
+  Output: default-output-file.txt
+
+  $ node 005-command-line-parameters/parse.js -R -o uli.txt
+  Reverse: Reverse flag is present.
+  Output: uli.txt
+  ```
+
 Working With MongoDB
 --------------------
 
@@ -77,6 +128,8 @@ Links And References
 --------------------
 
 - [W3Schools - Node.js Tutorial](https://www.w3schools.com/nodejs/)
+- [DigitalOcean - How To Handle Command-line Arguments in Node.js Scripts](https://www.digitalocean.com/community/tutorials/nodejs-command-line-arguments-node-scripts)
+- [NPM - Commander.js](https://www.npmjs.com/package/commander)
 - [MongoDB - MongoDB Node Driver](https://www.mongodb.com/docs/drivers/node/current/)
 - [dev.to -The final step: How to package a Node.JS application as an exe](https://dev.to/luckynkosi/the-final-step-how-to-package-a-node-js-application-4hol)
 - [Amplification -5 Different Tools to Bundle Node.js Apps]( https://amplication.com/blog/5-different-tools-to-bundle-nodejs-apps)
