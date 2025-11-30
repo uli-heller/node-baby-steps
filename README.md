@@ -93,6 +93,32 @@ set up and it provides no command line help for example (option `--help`).
 
 See [Node.js v25.2.1 documentation - util.parseArgs([config])](https://nodejs.org/api/util.html#utilparseargsconfig) for details!
 
+### Preparing A MongoDB Client
+
+For a mongodb client, I will probably need similar command line parameters
+as mongosh, so I need these parameters:
+
+- connectionString - mongodb://localhost:27017/
+- apiVersion 1
+- tls true
+- tlsCertificateKeyFile
+
+Here a dummy implementation based on "commander":
+
+- File: [dummy-mongoclient.js](005-command-line-parameters/dummy-mongoclient.js)
+- Run:
+  ```
+  $ node 005-command-line-parameters/dummy-mongoclient.js -h
+  Usage: dummy-mongoclient [OPTIONS]...
+  
+  Options:
+    -v, --version                                       output the version number
+    -c, --connectionString <mongodb-connection-string>  connection-string to connect to mongo db. (default:
+                                                        "mongodb://localhost:27017/")
+    -t, --tlsCertificateFile <certificate.pem>          client certificate for TLS auth.
+    -h, --help                                          display help for command
+  ```
+
 Working With MongoDB
 --------------------
 
